@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript加密混淆</title>
+		<style>
+			.text-box {
+				white-space: pre-wrap;
+				overflow-wrap: break-word;
+				user-select: text;
+				border: 1px solid #ccc;
+				width: 500px;
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.text-area {
+				width: 400px;
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="text-area">
+			<textarea id="textId" rows="18" cols="60" placeholder="在这里输入需要加密混淆的JavaScript"></textarea>
+			<button onclick="encryption()">加密混淆</button>
+			<button onclick="copyTextToClipboard()">复制</button>
+		</div>
+		<div id="boxId" class="text-box"></div>
+		<script src="index.browser.js"></script>
+		<script type="text/javascript">
+			function encryption() {
+				try{
+					const _0xcf1cec=_0x2ec1;(function(_0x360db6,_0x5a560c){const _0x5d3f86=_0x2ec1,_0x1b7396=_0x360db6();while(!![]){try{const _0x157a80=-parseInt(_0x5d3f86(0x88))/(-0x6*0x51b+0xb51+0x1352*0x1)*(parseInt(_0x5d3f86(0x93))/(0x726*-0x5+-0x102+-0x3ad*-0xa))+parseInt(_0x5d3f86(0x91))/(0xc*-0x172+-0xe68+0x1fc3)*(parseInt(_0x5d3f86(0x8a))/(-0x2*0xd81+-0x231*-0x9+0x74d))+-parseInt(_0x5d3f86(0x8d))/(-0x76b+-0xf18+0x1688)*(-parseInt(_0x5d3f86(0x90))/(-0x2a3+0x49*0x85+-0x2344))+-parseInt(_0x5d3f86(0x87))/(0x1a26+-0x862+-0x11bd)+-parseInt(_0x5d3f86(0x8c))/(-0x19a+-0x100*0x11+0x12*0x109)*(parseInt(_0x5d3f86(0x95))/(-0x2613+0x1b7a+0xaa2))+-parseInt(_0x5d3f86(0x96))/(-0xd+-0x2db+-0x2f2*-0x1)*(parseInt(_0x5d3f86(0x86))/(-0x191b*-0x1+0x1032+-0x14a1*0x2))+parseInt(_0x5d3f86(0x8e))/(-0x26*-0xc3+0x25e9+0x3*-0x1645);if(_0x157a80===_0x5a560c)break;else _0x1b7396['push'](_0x1b7396['shift']());}catch(_0x552d38){_0x1b7396['push'](_0x1b7396['shift']());}}}(_0x57ca,0x29a82+-0x1*0x4a810+-0x934*-0xf2));function _0x2ec1(_0x1b8161,_0x1656c8){const _0x4a0820=_0x57ca();return _0x2ec1=function(_0x4cf66b,_0x239186){_0x4cf66b=_0x4cf66b-(-0x1*0xe7a+-0x17a8+0x26a8);let _0xbd6b26=_0x4a0820[_0x4cf66b];return _0xbd6b26;},_0x2ec1(_0x1b8161,_0x1656c8);}let textDom=document[_0xcf1cec(0x89)+_0xcf1cec(0x8f)](_0xcf1cec(0x92)),boxDom=document[_0xcf1cec(0x89)+_0xcf1cec(0x8f)](_0xcf1cec(0x98)),textString=textDom[_0xcf1cec(0x94)];function _0x57ca(){const _0x593fe2=['56220knCnZM','3Fyfsmy','textId','1310142QDDCeW','value','36wuQwzR','848730iBqrIh','innerText','boxId','11amvatU','41706TKIDIh','1XSpAzp','getElement','661124BELYPy','obfuscate','480472NioHTq','255mcrhJY','9343164csazNZ','ById'];_0x57ca=function(){return _0x593fe2;};return _0x57ca();}boxDom[_0xcf1cec(0x97)]=JavaScriptObfuscator[_0xcf1cec(0x8b)](textString,{'compact':!![],'controlFlowFlattening':!![],'controlFlowFlatteningThreshold':0x1,'numbersToExpressions':!![],'simplify':!![],'stringArrayShuffle':!![],'splitStrings':!![],'stringArrayThreshold':0x1});
+				}catch(e){alert(e)}
+			}
+			// JavaScript 函数，用于复制文本到剪贴板
+			function copyTextToClipboard() {
+				let boxDom = document.getElementById('boxId');
+				navigator.clipboard.writeText(boxDom.innerText);
+				alert("复制成功");
+			}
+ 
+		</script>
+	</body>
+</html>
