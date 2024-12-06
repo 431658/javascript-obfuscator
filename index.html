@@ -23,14 +23,17 @@
 		<script type="text/javascript">
 			function encryption() {
 				try{
-					if(typeof JavaScriptObfuscator=='undefined') mdui.confirm({
-						headline: "错误",
-						description: "混淆器出问题了，请刷新页面",
-						cancelText: "关闭",
-						confirmText: "刷新",
-						onCancel: ()=>{},
-						onConfirm: ()=>{window.location.reload(true)},
-					});
+					if(typeof JavaScriptObfuscator=='undefined'){
+						mdui.confirm({
+							headline: "错误",
+							description: "混淆器出问题了，请刷新页面",
+							cancelText: "关闭",
+							confirmText: "刷新",
+							onCancel: ()=>{},
+							onConfirm: ()=>{window.location.reload(true)},
+						});
+						return;
+					}
  					let textDom = document.getElementById('textId');
 					let boxDom = document.getElementById('boxId');
 					let button = document.querySelector('.encryption');
@@ -44,7 +47,7 @@
 						'simplify':true,
 						'stringArrayShuffle':true,
 						'splitStrings':true,
-						'stringArrayThreshold':1
+						'stringArrayThreshold':1,
 					});
 					button.loading = false;
 				}catch(e){
