@@ -70,6 +70,24 @@
 					onActionClick: ()=>{},
 				});
 			}
+			const isScratch=window.location.search.substr(1).match(/(^|&)isScratch=([^&]*)(&|$)/);
+			document.getElementById('textId').value=isScratch?
+`class extension {
+	getInfo() {
+		return {
+			id: 'extension',
+			name: '扩展',
+			color1: '#FF0000',
+			blockIconURI: "",
+			blocks: []
+		};
+	}
+}
+Scratch.extensions.register(new extension());`:
+`function hi() {
+	console.log("Hello World!");
+}
+hi();`;
 			document.querySelector('.encryption').addEventListener('click', encryption);
 			document.querySelector('.copyTextToClipboard').addEventListener('click', copyTextToClipboard);
 			mdui.setColorScheme('#007bff');
