@@ -187,16 +187,20 @@
 					});
 				}
 			}
+			function copy_success(e) {
+				mdui.snackbar({
+					message: "复制成功",
+				});
+			}
 			// JavaScript 函数，用于复制文本到剪贴板
 			function copyTextToClipboard() {
 				let boxDom = document.getElementById('boxId');
-				navigator.clipboard.writeText(boxDom.value).then(()=>{
-					mdui.snackbar({
-						message: "复制成功",
-					});
-				}).catch((e)=>{
+				navigator.clipboard.writeText(boxDom.value).then(copy_success).catch((e)=>{
+					boxDom.select();
 					mdui.snackbar({
 						message: "复制失败，请手动复制",
+						action: "复制",
+						onActionClick: ()=>document.execCommand('copy'),
 					});
 				});
 			}
@@ -228,6 +232,7 @@ hi();`;
 
 			encryptionButton.addEventListener('click', encryption);
 			copyTextToClipboardButton.addEventListener('click', copyTextToClipboard);
+			boxDom.addEventListener('copy', copy_success);
 		</script>
 	</body>
 </html>
