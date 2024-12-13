@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="mdui-theme-auto">
 	<head>
 		<meta charset="utf-8">
 		<title>JavaScript加密混淆</title>
@@ -190,10 +190,14 @@
 			// JavaScript 函数，用于复制文本到剪贴板
 			function copyTextToClipboard() {
 				let boxDom = document.getElementById('boxId');
-				navigator.clipboard.writeText(boxDom.value);
-				mdui.snackbar({
-					message: "复制成功",
-					onActionClick: ()=>{},
+				navigator.clipboard.writeText(boxDom.value).then(()=>{
+					mdui.snackbar({
+						message: "复制成功",
+					});
+				}).catch((e)=>{
+					mdui.snackbar({
+						message: "复制失败，请手动复制",
+					});
 				});
 			}
 			const isScratch=window.location.search.substr(1).match(/(^|&)isScratch=([^&]*)(&|$)/);
