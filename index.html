@@ -200,7 +200,10 @@
 					mdui.snackbar({
 						message: "复制失败，请手动复制",
 						action: "复制",
-						onActionClick: ()=>document.execCommand('copy'),
+						onActionClick: ()=>{
+							boxDom.select();
+							return document.execCommand('copy');
+						},
 					});
 				});
 			}
