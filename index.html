@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<script>
-			window.addEventListener("error",(e)=>prompt(`第${e.lineno}行第${e.colno}列发生${e.error.name}`,e.error));
+			window.addEventListener("error",(e)=>window.location.reload(true));
 		</script>
 		<link rel="stylesheet" href="mdui.css">
 		<script src="mdui.global.js"></script>
